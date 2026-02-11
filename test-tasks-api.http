@@ -1,0 +1,99 @@
+# 1 GET all tasks  200 with tasks array
+GET http://assignment1-rest-api-extension-hze3daf9etd6cucs.canadacentral-01.azurewebsites.net:8000/tasks
+Accept: application/json
+
+###
+
+# 2 GET a single task = 200 with task object  
+GET http://assignment1-rest-api-extension-hze3daf9etd6cucs.canadacentral-01.azurewebsites.net:8000/tasks/2
+Accept: application/json
+# expected 200 with task object
+
+###
+
+# 3 GET a task that doesn't exist = 404
+GET http://assignment1-rest-api-extension-hze3daf9etd6cucs.canadacentral-01.azurewebsites.net:8000/tasks/99
+Accept: application/json
+###
+
+# 4 POST a new task (valid data) = 201 with created task (valid task_id=3)
+POST http://assignment1-rest-api-extension-hze3daf9etd6cucs.canadacentral-01.azurewebsites.net:8000/tasks
+Content-Type: application/json
+
+{
+    "id": 3,
+    "title": "Learn Azure APP Service Deploy",
+    "description": "Study Azure App Services",
+    "user_id": 2,
+    "completed": false
+}
+
+###
+
+# 5 POST a task with missing title = 400 missing required title
+POST http://assignment1-rest-api-extension-hze3daf9etd6cucs.canadacentral-01.azurewebsites.net:8000/tasks
+Content-Type: application/json
+
+{
+    "id": 4,
+    "description": "Eat Dinner",
+    "user_id": 2,
+    "completed": true
+}
+
+
+###
+
+# 6 POST a task with invalid user_id = 400 invalid user_id
+POST http://assignment1-rest-api-extension-hze3daf9etd6cucs.canadacentral-01.azurewebsites.net:8000/tasks
+Content-Type: application/json
+
+{
+    "id": 4,
+    "title": "Learn How to add an invalid user id",
+    "description": "Read REST API Documentation",
+    "user_id": 99,
+    "completed": true
+}
+
+
+###
+
+# 7 PUT to update a task = 200 with updated task 
+PUT http://assignment1-rest-api-extension-hze3daf9etd6cucs.canadacentral-01.azurewebsites.net:8000/tasks/2
+Content-Type: application/json
+
+{
+    "id": 2,
+    "title": "Learn Azure APP Service Deploy",
+    "description": "Study Azure App Services",
+    "user_id": 2,
+    "completed": true
+}
+
+###
+
+# 8 DELETE a task  204
+DELETE http://assignment1-rest-api-extension-hze3daf9etd6cucs.canadacentral-01.azurewebsites.net:8000/tasks/3
+Content-Type: application/json
+
+{
+    "id": 3,
+    "title": "Learn Azure APP Service Deploy",
+    "description": "Study Azure App Services",
+    "user_id": 2,
+    "completed": true
+}
+
+###
+
+# expected 204 NOT FOUND - no task_id = 3 - check with get below: 
+GET http://assignment1-rest-api-extension-hze3daf9etd6cucs.canadacentral-01.azurewebsites.net:8000/tasks/3
+Accept: application/json
+# expected 404 no task found
+
+###
+
+# 9 - GET tasks for a specific user = 200 with user's tasks
+GET http://assignment1-rest-api-extension-hze3daf9etd6cucs.canadacentral-01.azurewebsites.net:8000/users/2/tasks
+Accept: application/json

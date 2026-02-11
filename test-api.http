@@ -1,29 +1,29 @@
 # GET root URL
-GET http://localhost:8000/
+GET http://assignment1-rest-api-extension-hze3daf9etd6cucs.canadacentral-01.azurewebsites.net:8000/
 Accept: text/plain
 
 ###
 
 # GET health check
-GET http://localhost:8000/health
+GET http://assignment1-rest-api-extension-hze3daf9etd6cucs.canadacentral-01.azurewebsites.net:8000/health
 Accept: application/json
 
 ###
 
 # GET all users
-GET http://localhost:8000/users
+GET http://assignment1-rest-api-extension-hze3daf9etd6cucs.canadacentral-01.azurewebsites.net:8000/users
 Accept: application/json
 
 ###
 
 # GET a specific user by ID
-GET http://localhost:8000/users/1
+GET http://assignment1-rest-api-extension-hze3daf9etd6cucs.canadacentral-01.azurewebsites.net:8000/users/1
 Accept: application/json
 
 ###
 
 # POST create a new user
-POST http://localhost:8000/users
+POST http://assignment1-rest-api-extension-hze3daf9etd6cucs.canadacentral-01.azurewebsites.net:8000/users
 Content-Type: application/json
 
 {
@@ -34,7 +34,7 @@ Content-Type: application/json
 ###
 
 # PUT update a user by ID
-PUT http://localhost:8000/users/1
+PUT http://assignment1-rest-api-extension-hze3daf9etd6cucs.canadacentral-01.azurewebsites.net:8000/users/1
 Content-Type: application/json
 
 {
@@ -45,4 +45,6 @@ Content-Type: application/json
 ###
 
 # DELETE a user by ID
-DELETE http://localhost:8000/users/1
+DELETE http://assignment1-rest-api-extension-hze3daf9etd6cucs.canadacentral-01.azurewebsites.net:8000/users/1
+
+
