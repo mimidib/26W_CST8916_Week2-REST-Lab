@@ -13,7 +13,7 @@
 
 ## Demo Video
 
-🎥 [Watch Demo Video](placeholder)
+🎥 [Watch Demo Video](https://youtu.be/sSv9H3zHImg)
 
 ## Learning Objectives
 
@@ -27,6 +27,8 @@ Upon successful completion of this assignment, you will be able to:
 | ✅  | Test API endpoints using the REST Client extension              |
 | ✅  | Deploy a REST API to Azure App Service                          |
 
+### Reflection
+I noticed the local POST, PUT, DELETE works, but in Azure it does not- I found it worked using HTTPS due to security built-in features of Azure App Service
 
 ### [✅] Part 1: Add a Tasks Resource
 
