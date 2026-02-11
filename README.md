@@ -14,6 +14,9 @@
 ## Demo Video
 
 🎥 [Watch Demo Video](https://youtu.be/sSv9H3zHImg)
+Please note: The youtube video started the recording a second too late, *after* clicking the azure browser url.  
+For your reference see the following ui image to compensate:
+![Azure Portal URL](/azure-portal-url.png)
 
 ## Learning Objectives
 
